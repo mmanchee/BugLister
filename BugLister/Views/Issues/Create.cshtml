@@ -8,18 +8,17 @@
 
 @using (Html.BeginForm())
 {
-  
   @Html.LabelFor(model => model.Title)
-  @Html.TextBoxFor(model => model.Title)
+  @Html.TextBoxFor(model => model.Title, new { @required = "required"})<br>
   @Html.LabelFor(model => model.Type)
-  @Html.TextBoxFor(model => model.Type)
+  @Html.DropDownList("Type")<br>
   @Html.LabelFor(model => model.Description)
-  @Html.TextBoxFor(model => model.Description)
+  @Html.TextAreaFor(model => model.Description, new { @class="big-input"})<br>
   @Html.LabelFor(model => model.Solution)
-  @Html.TextBoxFor(model => model.Solution)
+  @Html.TextAreaFor(model => model.Solution, new { @class="big-input"})<br>
 
   @Html.LabelFor(model => model.Language)
-  @Html.DropDownList("LanguageId")
+  @Html.DropDownList("LanguageId")<br>
 
   <input type="submit" value="Add new issue" class="btn btn-default" />
 }

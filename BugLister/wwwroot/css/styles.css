@@ -1,6 +1,22 @@
 body {
   margin: 0 auto;
   max-width: 1200px;
-  background-color: beige;
+  background-color: rgb(192, 238, 216);
   font-size: 15px;
+}
+.render {
+  margin: 0 50px 0 50px;
+}
+
+.box {
+  background-color: beige;
+  height: 200px;
+  width: 75%;
+  overflow-y: scroll;
+  margin-top: 20px;
+}
+
+.big-input {
+  height: 10%;
+  width: 30%;
 }

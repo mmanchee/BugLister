@@ -13,10 +13,10 @@
     @Html.HiddenFor(model => model.LanguageId)
 
     @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name)
+    @Html.EditorFor(model => model.Name, new { @required = "required"})<br>
 
     @Html.LabelFor(model => model.DocLink)
-    @Html.EditorFor(model => model.DocLink)
+    @Html.EditorFor(model => model.DocLink)<br>
 
     <input type="submit" value="Save" />
 }

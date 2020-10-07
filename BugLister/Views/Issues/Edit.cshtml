@@ -12,19 +12,17 @@
 {
     @Html.HiddenFor(model => model.IssueId)
     @Html.LabelFor(model => model.Title)
-    @Html.EditorFor(model => model.Title)
+    @Html.EditorFor(model => model.Title, new { @required = "required"})<br>
 
     @Html.LabelFor(model => model.Language)
-    @Html.DropDownList("LanguageId")
+    @Html.DropDownList("LanguageId")<br>
 
     @Html.LabelFor(model => model.Type)
-    @Html.EditorFor(model => model.Type)
+    @Html.DropDownList("Type")<br>
     @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)<br>
     @Html.LabelFor(model => model.Solution)
-    @Html.EditorFor(model => model.Solution)
-
-    
+    @Html.EditorFor(model => model.Solution)<br>
 
     <input type="submit" value="Save" />
 }

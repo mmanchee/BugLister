@@ -24,6 +24,7 @@ namespace BugLister.Controllers
     public ActionResult Create()
     {
       ViewBag.LanguageId = new SelectList(_db.Languages, "LanguageId", "Name");
+      ViewBag.Type = Issue.TypeList();
       return View();
     }
     [HttpPost]
@@ -43,6 +44,7 @@ namespace BugLister.Controllers
     {
       var thisIssue = _db.Issues.FirstOrDefault(Issues => Issues.IssueId == id);
       ViewBag.LanguageId = new SelectList(_db.Languages, "LanguageId", "Name");
+      ViewBag.Type = Issue.TypeList();
       return View(thisIssue);
     }
     [HttpPost]

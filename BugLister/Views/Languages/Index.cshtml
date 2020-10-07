@@ -12,10 +12,12 @@
   <p>No languages have been added yet!</p>
 } 
 
-@foreach (Language language in Model)
-{
-  <li>@Html.ActionLink($"{language.Name}", "Details", new { id = language.LanguageId })</li>
-}
+<div class="box">
+  @foreach (Language language in Model)
+  {
+    <li>@Html.ActionLink($"{language.Name}", "Details", new { id = language.LanguageId })</li>
+  }
+</div>
 
 <p>@Html.ActionLink("Add new language", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
