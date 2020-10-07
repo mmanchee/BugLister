@@ -10,4 +10,8 @@ namespace BugLister.Models
     public int LanguageId { get; set; }
     public virtual Language Language { get; set; }
   }
+  public List<Issue> Search()
+  {
+    
+  }
 }

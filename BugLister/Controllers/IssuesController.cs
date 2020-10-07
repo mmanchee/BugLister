@@ -65,5 +65,23 @@ namespace BugLister.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
+    [HttpPost]
+    public ActionResult Search(string search)
+    {
+
+      // List<Animal> allAnimals = _db.Animals.ToList();
+      // List<Animal> model = new List<Animal> { };
+      // foreach (Animal animal in allAnimals)
+      // {
+      //   string temp = animal.Name.ToUpper();
+      //   string temp2 = name.ToUpper();
+
+      //   if (temp.Contains(temp2))
+      //   {
+      //     model.Add(animal);
+      //   }
+      // }
+      return View(model);
+    }
   }
 }

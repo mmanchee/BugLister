@@ -4,14 +4,14 @@
 
 @model BugLister.Models.Issue
 
-<h2>Issue Details</h2>
+<p>Issue Details</p>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)</h3>
-<p>@ViewBag.Name</p> @*model.Language.Name *@ 
+<p>@Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)</p>
 <p>@Html.DisplayNameFor(model => model.Language.Name): @Html.DisplayFor(model => model.Language.Name)</p>
 <p>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</p>
 <p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
 <p>@Html.DisplayNameFor(model => model.Solution): @Html.DisplayFor(model => model.Solution)</p>
+
 <p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Edit Issue", "Edit", new { id = Model.IssueId })</p>
 <p>@Html.ActionLink("Delete Issue", "Delete", new { id = Model.IssueId })</p>

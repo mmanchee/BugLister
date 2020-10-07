@@ -3,14 +3,30 @@
 }
 
 @model BugLister.Models.Language
+@using BugLister.Models
 
 <h2>Language Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.DocLink): @Html.DisplayFor(model => model.DocLink)</h3>
+<p>@Html.DisplayNameFor(model => model.DocLink): <a href='@Html.DisplayFor(model => model.DocLink)'>Main Documentation</a></p>
 
+@if (@Model.Issues.Count == 0)
+{
+  <p>No issues have been added yet!</p>
+} 
 
+@foreach (Issue issue in Model.Issues)
+{
+  <li>@Html.ActionLink($"{issue.Title}", "Index", "Issues")</li>
+}
+
+<p>@Html.ActionLink("Add new issue", "Create", "Issues")</p>
 <p>@Html.ActionLink("Back to language list", "Index")</p>
 <p>@Html.ActionLink("Edit language", "Edit", new { id = Model.LanguageId })</p>
 <p>@Html.ActionLink("Delete language", "Delete", new { id = Model.LanguageId })</p>
+<form action="/Issues/Search" method="post">
+  <label>Enter a Search</label>
+  <input class="input" type="text" id="search" name="search">
+  <input type="submit" value="Search" class="btn btn-info buttons" />
+</form>

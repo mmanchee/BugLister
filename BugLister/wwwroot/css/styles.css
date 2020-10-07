@@ -2,15 +2,5 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   background-color: beige;
-  font-size: 30px;
-}
-
-div#footer {
-  position:fixed;
-  bottom:0px;
-  left:0px;
-  width:100%;
-  color:#CCC;
-  background:#333;
-  padding:8px;
+  font-size: 15px;
 }

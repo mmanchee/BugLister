@@ -1,0 +1,12 @@
+@{
+  Layout = "_Layout";
+}
+
+<h1>Welcome to the Language Issue solver</h1>
+<p>@Html.ActionLink("See all languages", "Index", "Languages")</p>
+<p>@Html.ActionLink("See all issues", "Index", "Issues")</p>
+<form action="/Issues/Search" method="post">
+  <label>Enter a Search</label>
+  <input class="input" type="text" id="search" name="search">
+  <input type="submit" value="Search" class="btn btn-info buttons" />
+</form>
