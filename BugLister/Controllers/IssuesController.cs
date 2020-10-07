@@ -68,19 +68,8 @@ namespace BugLister.Controllers
     [HttpPost]
     public ActionResult Search(string search)
     {
-
-      // List<Animal> allAnimals = _db.Animals.ToList();
-      // List<Animal> model = new List<Animal> { };
-      // foreach (Animal animal in allAnimals)
-      // {
-      //   string temp = animal.Name.ToUpper();
-      //   string temp2 = name.ToUpper();
-
-      //   if (temp.Contains(temp2))
-      //   {
-      //     model.Add(animal);
-      //   }
-      // }
+      List<Issue> searchList = _db.Issues.Include(issues => issues.Language).ToList();
+      List<Issue> model = Issue.Search(searchList, search);
       return View(model);
     }
   }

@@ -1,3 +1,8 @@
+using System.Collections.Generic;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc.Rendering;
+
 namespace BugLister.Models
 {
   public class Issue
@@ -9,9 +14,23 @@ namespace BugLister.Models
     public string Solution { get; set; }
     public int LanguageId { get; set; }
     public virtual Language Language { get; set; }
-  }
-  public List<Issue> Search()
-  {
-    
+    private BugListerContext _db;
+
+    public static List<Issue> Search(List<Issue> allIssues, string searchParam)
+    {
+      List<Issue> matchingIssues = new List<Issue> { };
+      foreach (Issue issue in allIssues)
+      {
+        if (issue.Title.ToUpper().Contains(searchParam.ToUpper()))
+        {
+          matchingIssues.Add(issue);
+        }
+        else if (issue.Description.ToUpper().Contains(searchParam.ToUpper()))
+        {
+          matchingIssues.Add(issue);
+        }
+      }
+      return matchingIssues;
+    }
   }
 }
