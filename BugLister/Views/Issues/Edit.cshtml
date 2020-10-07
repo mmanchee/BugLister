@@ -1,0 +1,32 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BugLister.Models.Issue
+
+<h2>Edit</h2>
+
+<h4>Edit this task: @Html.DisplayFor(model => model.Title)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.IssueId)
+    @Html.LabelFor(model => model.Title)
+    @Html.EditorFor(model => model.Title)
+
+    @Html.LabelFor(model => model.Language)
+    @Html.DropDownList("LanguageId")
+
+    @Html.LabelFor(model => model.Type)
+    @Html.EditorFor(model => model.Type)
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+    @Html.LabelFor(model => model.Solution)
+    @Html.EditorFor(model => model.Solution)
+
+    
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

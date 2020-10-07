@@ -1,0 +1,26 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BugLister.Models.Issue
+
+<h4>Add a new task</h4>
+
+@using (Html.BeginForm())
+{
+  
+  @Html.LabelFor(model => model.Title)
+  @Html.TextBoxFor(model => model.Title)
+  @Html.LabelFor(model => model.Type)
+  @Html.TextBoxFor(model => model.Type)
+  @Html.LabelFor(model => model.Description)
+  @Html.TextBoxFor(model => model.Description)
+  @Html.LabelFor(model => model.Solution)
+  @Html.TextBoxFor(model => model.Solution)
+
+  @Html.LabelFor(model => model.Language)
+  @Html.DropDownList("LanguageId")
+
+  <input type="submit" value="Add new issue" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all issues", "Index")</p>

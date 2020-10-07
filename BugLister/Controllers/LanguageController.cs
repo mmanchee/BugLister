@@ -37,7 +37,9 @@ namespace BugLister.Controllers
 
     public ActionResult Details(int id)
     {
-      Language thisLanguage = _db.Languages.FirstOrDefault(languages => languages.LanguageId == id);
+      Language thisLanguage = _db.Languages
+      .Include(language => language.Issues)
+      .FirstOrDefault(languages => languages.LanguageId == id);
       return View(thisLanguage);
     }
 

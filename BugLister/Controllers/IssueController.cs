@@ -36,6 +36,7 @@ namespace BugLister.Controllers
     public ActionResult Details(int id)
     {
       Issue thisIssue = _db.Issues.FirstOrDefault(Issues => Issues.IssueId == id);
+      ViewBag.Name = _db.Languages.FirstOrDefault(languages => languages.LanguageId == thisIssue.LanguageId);
       return View(thisIssue);
     }
     public ActionResult Edit(int id)

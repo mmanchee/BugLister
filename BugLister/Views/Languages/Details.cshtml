@@ -1,0 +1,16 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BugLister.Models.Language
+
+<h2>Language Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.DocLink): @Html.DisplayFor(model => model.DocLink)</h3>
+
+
+<p>@Html.ActionLink("Back to language list", "Index")</p>
+<p>@Html.ActionLink("Edit language", "Edit", new { id = Model.LanguageId })</p>
+<p>@Html.ActionLink("Delete language", "Delete", new { id = Model.LanguageId })</p>
