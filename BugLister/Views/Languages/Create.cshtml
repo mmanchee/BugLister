@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BugLister.Models.Language
+
+<h4>Add a new language</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+
+    @Html.LabelFor(model => model.DocLink)
+    @Html.TextBoxFor(model => model.DocLink)
+
+    <input type="submit" value="Add new language" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all languages", "Index")</p>

@@ -10,7 +10,7 @@ namespace BugLister.Models
     }
 
     public string Name { get; set; }
-    public int Id { get; set; }
+    public int LanguageId { get; set; }
     public string DocLink { get; set; }
     public virtual ICollection<Issue> Issues { get; set; }
   }

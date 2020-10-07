@@ -7,5 +7,7 @@ namespace BugLister.Models
     public string Description { get; set; }
     public int IssueId { get; set; }
     public string Solution { get; set; }
+    public int LanguageId { get; set; }
+    public virtual Language Language { get; set; }
   }
 }
