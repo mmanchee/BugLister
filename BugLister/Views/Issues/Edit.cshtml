@@ -32,6 +32,18 @@
         <td>@Html.LabelFor(model => model.Solution)</td>
         <td>@Html.EditorFor(model => model.Solution, new { @class="big-input editor"})</td>
       </tr>
+      <tr>
+        <td>@Html.LabelFor(model => model.Link1)</td>
+        <td>@Html.TextAreaFor(model => model.Link1)</td>
+      </tr>
+      <tr>
+        <td>@Html.LabelFor(model => model.Link2)</td>
+        <td>@Html.TextAreaFor(model => model.Link2)</td>
+      </tr>
+      <tr>
+        <td>@Html.LabelFor(model => model.Link3)</td>
+        <td>@Html.TextAreaFor(model => model.Link3)</td>
+      </tr>
     </table>
     <input type="submit" value="Save" />
 }

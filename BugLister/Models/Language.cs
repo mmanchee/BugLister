@@ -9,7 +9,7 @@ namespace BugLister.Models
       this.Issues = new HashSet<Issue>();
     }
 
-    public string Name { get; set; }
+    public string LanguageName { get; set; }
     public int LanguageId { get; set; }
     public string DocLink { get; set; }
     public virtual ICollection<Issue> Issues { get; set; }

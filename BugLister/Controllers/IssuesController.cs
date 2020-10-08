@@ -23,7 +23,8 @@ namespace BugLister.Controllers
     }
     public ActionResult Create()
     {
-      ViewBag.LanguageId = new SelectList(_db.Languages, "LanguageId", "Name");
+      ViewBag.LanguageId = new SelectList(_db.Languages, "LanguageId", "LanguageName");
+      ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
       ViewBag.Type = Issue.TypeList();
       return View();
     }
@@ -38,13 +39,15 @@ namespace BugLister.Controllers
     public ActionResult Details(int id)
     {
       Issue thisIssue = _db.Issues.FirstOrDefault(Issues => Issues.IssueId == id);
-      ViewBag.Name = _db.Languages.FirstOrDefault(languages => languages.LanguageId == thisIssue.LanguageId);
+      ViewBag.LanguageName = _db.Languages.FirstOrDefault(languages => languages.LanguageId == thisIssue.LanguageId);
+      ViewBag.ProjectName = _db.Projects.FirstOrDefault(projects => projects.ProjectId == thisIssue.ProjectId);
       return View(thisIssue);
     }
     public ActionResult Edit(int id)
     {
       var thisIssue = _db.Issues.FirstOrDefault(Issues => Issues.IssueId == id);
-      ViewBag.LanguageId = new SelectList(_db.Languages, "LanguageId", "Name");
+      ViewBag.LanguageId = new SelectList(_db.Languages, "LanguageId", "LanguageName");
+      ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
       ViewBag.Type = Issue.TypeList();
       return View(thisIssue);
     }

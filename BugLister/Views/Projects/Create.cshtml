@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BugLister.Models.Project
+
+<h4>Add a new projecte</h4>
+
+@using (Html.BeginForm())
+{
+  <table class="set-table">
+    <tr>
+      <td>@Html.LabelFor(model => model.ProjectName)</td>
+      <td>@Html.TextBoxFor(model => model.ProjectName, new { @required = "required"})</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.Description)</td>
+      <td>@Html.TextBoxFor(model => model.Description)</td>
+    </tr>
+  <tr>
+      <td>@Html.LabelFor(model => model.Issues)</td>
+      <td>@Html.TextBoxFor(model => model.Issues)</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.Link)</td>
+      <td>@Html.TextBoxFor(model => model.Link)</td>
+    </tr>
+  </table>
+  <input type="submit" value="Add new Project" class="btn btn-default" />
+}
+<p>@Html.ActionLink("Show all projects", "Index")</p>

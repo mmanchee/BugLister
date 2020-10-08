@@ -6,15 +6,15 @@
 
 <h2>Edit</h2>
 
-<h4>Edit this language: @Html.DisplayFor(model => model.Name)</h4>
+<h4>Edit this language: @Html.DisplayFor(model => model.LanguageName)</h4>
 
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.LanguageId)
   <table class="set-table">
     <tr>
-      <td>@Html.LabelFor(model => model.Name)</td>
-      <td>@Html.EditorFor(model => model.Name, new { @required = "required"})</td>
+      <td>@Html.LabelFor(model => model.LanguageName)</td>
+      <td>@Html.EditorFor(model => model.LanguageName, new { @required = "required"})</td>
     </tr>
     <tr>
       <td>@Html.LabelFor(model => model.DocLink)</td>

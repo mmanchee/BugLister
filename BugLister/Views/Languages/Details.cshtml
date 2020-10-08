@@ -9,8 +9,8 @@
 <hr />
 <table class="set-table">
   <tr>
-    <td>@Html.DisplayNameFor(model => model.Name):</td>
-    <td>@Html.DisplayFor(model => model.Name)</td>
+    <td>@Html.DisplayNameFor(model => model.LanguageName):</td>
+    <td>@Html.DisplayFor(model => model.LanguageName)</td>
   </tr>
   <tr>
     <td>@Html.DisplayNameFor(model => model.DocLink):</td>
@@ -18,12 +18,12 @@
   </tr>
 </table>
 
-@if (@Model.Issues.Count == 0)
-{
-  <p>No issues have been added yet!</p>
-} 
 <div class="box">
   <div class="inner-box">
+    @if (@Model.Issues.Count == 0)
+    {
+      <p>No issues have been added yet!</p>
+    } 
     @foreach (Issue issue in Model.Issues)
     {
       <li>@Html.ActionLink($"{issue.Title}", "Details", "Issues", new { id = issue.IssueId})</li>

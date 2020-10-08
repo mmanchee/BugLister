@@ -13,8 +13,13 @@ namespace BugLister.Models
     public string Description { get; set; }
     public int IssueId { get; set; }
     public string Solution { get; set; }
+    public string Link1 { get; set; }
+    public string Link2 { get; set; }
+    public string Link3 { get; set; }
     public int LanguageId { get; set; }
+    public int ProjectId { get; set; }
     public virtual Language Language { get; set; }
+    public virtual Project Project { get; set; }
     private BugListerContext _db;
 
     // public Type IssueType { get; set; }

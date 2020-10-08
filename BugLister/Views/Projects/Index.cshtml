@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+
+@using BugLister.Models;
+@model List<BugLister.Models.Project>;
+
+<h1>Projects</h1>
+
+<div class="box">
+  <div class="inner-box">
+    @if (@Model.Count == 0)
+    {
+      <p>No projects have been added yet!</p>
+    }
+    @foreach (Project project in Model)
+    {
+      <li>@Html.ActionLink($"{project.ProjectName}", "Details", new { id = project.ProjectId })</li>
+    }
+  </div>  
+</div>
+
+<p>@Html.ActionLink("Add new project", "Create")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>

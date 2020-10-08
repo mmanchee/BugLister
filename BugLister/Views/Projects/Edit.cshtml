@@ -1,0 +1,31 @@
+@{
+  Layout = "_Layout";
+}
+
+@model BugLister.Models.Project
+
+<h2>Edit</h2>
+
+<h4>Edit this Project: @Html.DisplayFor(model => model.ProjectName)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.ProjectId)
+  <table class="set-table">
+    <tr>
+      <td>@Html.LabelFor(model => model.ProjectName)</td>
+      <td>@Html.EditorFor(model => model.ProjectName, new { @required = "required"})</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.Description)</td>
+      <td>@Html.EditorFor(model => model.Description)</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.Link)</td>
+      <td>@Html.EditorFor(model => model.Link)</td>
+    </tr>
+  </table>
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to language list", "Index")</p>

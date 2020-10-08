@@ -1,6 +1,6 @@
 # _BugLister_
 
-#### _C# ASP.NET MCV w/ MySQL Project for Epicodus, October 2nd, 2020_
+#### _C# ASP.NET MCV w/ MySQL Project for Epicodus, October 7th, 2020_
 
 #### By _**Mike Manchee, Daniel Schaaf, and William Donovan-Seid**_
 
@@ -14,11 +14,19 @@
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-|  1.  ... | ... | ... |
+|  1.  Create Issues and Language Classes | ... | ... |
+|  1.  Build Issue Controllers for Index, Create, Delete, Details, Edit, and Search | ... | ... |
+|  1.  Build Language Controllers for Index, Create, Delete, Details, and Edit | ... | ... |
+|  1.  Build Home Controllers for Index | ... | ... |
+|  1.  Build Home Views for Index | ... | ... |
+|  1.  Build Issue Views for Index, Create, Delete, Details, Edit, and Search | ... | ... |
+|  1.  Build Language Views for Index, Create, Delete, Details, and Edit | ... | ... |
+|  1.  Create Issues and Language Classes | ... | ... |
 
 
 ## Setup/Installation Requirements
 
+### Project from GitHub
 * Download option
   * Download files from GitHub repository by click Code and Download Zip
   * Extract files into a single directory 
@@ -34,6 +42,23 @@
   * Type "dotnet restore" to get bin and obj files
   * Type "dotnet run" in GitBash to run the program
   * Have fun with BugLister <!-- TITLE HERE -->
+
+### Database Setup
+* Setup with SQL statements 
+  * Enter the following code into your SQL database and run.
+    * 
+  * Go to appsettings.json and change the password if needed.
+
+* Setup with SQL Import
+  * MySQL
+    * In the Navigator > Administration window, select Data Import/Restore.
+    * In Import Options select Import from Self-Contained File.
+    * Navigate to the file.
+    * Under Default Schema to be Imported To, select the New button.
+      * Enter 'buglister' as the name of your database.
+      * Click Ok.
+    * Click Start Import.
+  * Go to appsettings.json and change the password if needed.
 
 ## Known Bugs
 
@@ -52,6 +77,7 @@ Main Programs
 
 ### Other Links
 [Mike's GitHub](https://github.com/mmanchee)
+[Will's GitHub](https://github.com/wdonovanseid)
 
 ### License
 
