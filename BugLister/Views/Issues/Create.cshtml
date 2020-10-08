@@ -8,18 +8,28 @@
 
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Title)
-  @Html.TextBoxFor(model => model.Title, new { @required = "required"})<br>
-  @Html.LabelFor(model => model.Type)
-  @Html.DropDownList("Type")<br>
-  @Html.LabelFor(model => model.Description)
-  @Html.TextAreaFor(model => model.Description, new { @class="big-input"})<br>
-  @Html.LabelFor(model => model.Solution)
-  @Html.TextAreaFor(model => model.Solution, new { @class="big-input"})<br>
-
-  @Html.LabelFor(model => model.Language)
-  @Html.DropDownList("LanguageId")<br>
-
+  <table class="set-table">
+    <tr>
+      <td>@Html.LabelFor(model => model.Title)</td>
+      <td>@Html.TextBoxFor(model => model.Title, new { @required = "required"})</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.Type)</td>
+      <td>@Html.DropDownList("Type")</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.Description)</td>
+      <td>@Html.TextAreaFor(model => model.Description, new { @class="big-input"})</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.Solution)</td>
+      <td>@Html.TextAreaFor(model => model.Solution, new { @class="big-input"})</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.Language)</td>
+      <td>@Html.DropDownList("LanguageId")</td>
+    </tr>
+  </table>
   <input type="submit" value="Add new issue" class="btn btn-default" />
 }
 <p>@Html.ActionLink("Show all issues", "Index")</p>

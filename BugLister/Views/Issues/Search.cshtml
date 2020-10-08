@@ -13,10 +13,14 @@
 }
 else
 {
-  @foreach (Issue issue in Model)
-  {
-    <li>@Html.ActionLink($"{issue.Title}", "Details", new {id = issue.IssueId })</li>
-  }
+  <div class="box">
+    <div class="inner-box">
+      @foreach (Issue issue in Model)
+      {
+        <li>@Html.ActionLink($"{issue.Title}", "Details", new {id = issue.IssueId })</li>
+      }
+    </div>
+  </div>
 }
 
 

@@ -6,11 +6,28 @@
 
 <p>Issue Details</p>
 <hr />
-<p>@Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)</p>
-<p>@Html.DisplayNameFor(model => model.Language.Name): @Html.DisplayFor(model => model.Language.Name)</p>
-<p>@Html.DisplayNameFor(model => model.Type): @Html.DisplayFor(model => model.Type)</p>
-<p>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</p>
-<p>@Html.DisplayNameFor(model => model.Solution): @Html.DisplayFor(model => model.Solution)</p>
+<table class="set-table">
+  <tr>
+    <td>@Html.DisplayNameFor(model => model.Title):</td>
+    <td>@Html.DisplayFor(model => model.Title)</td>
+  </tr>
+  <tr>
+    <td>@Html.DisplayNameFor(model => model.Language.Name):</td>
+    <td>@Html.DisplayFor(model => model.Language.Name)</td>
+  </tr>
+  <tr>
+    <td>@Html.DisplayNameFor(model => model.Type):</td>
+    <td>@Html.DisplayFor(model => model.Type)</td>
+  </tr>
+  <tr>
+    <td>@Html.DisplayNameFor(model => model.Description):</td>
+    <td>@Html.DisplayFor(model => model.Description)</td>
+  </tr>
+  <tr>
+    <td>@Html.DisplayNameFor(model => model.Solution):</td>
+    <td>@Html.DisplayFor(model => model.Solution)</td>
+  </tr>
+</table>
 
 <p>@Html.ActionLink("Back to list", "Index")</p>
 <p>@Html.ActionLink("Edit Issue", "Edit", new { id = Model.IssueId })</p>

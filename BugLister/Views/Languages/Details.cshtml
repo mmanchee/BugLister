@@ -7,19 +7,28 @@
 
 <h2>Language Details</h2>
 <hr />
-<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
-<hr />
-<p>@Html.DisplayNameFor(model => model.DocLink): <a href='@Html.DisplayFor(model => model.DocLink)'>Main Documentation</a></p>
+<table class="set-table">
+  <tr>
+    <td>@Html.DisplayNameFor(model => model.Name):</td>
+    <td>@Html.DisplayFor(model => model.Name)</td>
+  </tr>
+  <tr>
+    <td>@Html.DisplayNameFor(model => model.DocLink):</td>
+    <td><a href='@Html.DisplayFor(model => model.DocLink)'>Main Documentation</a></td>
+  </tr>
+</table>
 
 @if (@Model.Issues.Count == 0)
 {
   <p>No issues have been added yet!</p>
 } 
 <div class="box">
-  @foreach (Issue issue in Model.Issues)
-  {
-    <li>@Html.ActionLink($"{issue.Title}", "Details", "Issues", new { id = issue.IssueId})</li>
-  }
+  <div class="inner-box">
+    @foreach (Issue issue in Model.Issues)
+    {
+      <li>@Html.ActionLink($"{issue.Title}", "Details", "Issues", new { id = issue.IssueId})</li>
+    }
+  </div>
 </div>
 
 

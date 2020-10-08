@@ -13,10 +13,12 @@
 } 
 
 <div class="box">
-  @foreach (Language language in Model)
-  {
-    <li>@Html.ActionLink($"{language.Name}", "Details", new { id = language.LanguageId })</li>
-  }
+  <div class="inner-box">
+    @foreach (Language language in Model)
+    {
+      <li>@Html.ActionLink($"{language.Name}", "Details", new { id = language.LanguageId })</li>
+    }
+  </div>  
 </div>
 
 <p>@Html.ActionLink("Add new language", "Create")</p>

@@ -12,13 +12,12 @@
   <p>No issues have been added yet!</p>
 } 
 <div class="box">
-  @foreach (Issue issue in Model)
-  {
-    <li>@Html.ActionLink($"{issue.Title}", "Details", new { id = issue.IssueId }) | @issue.Language.Name</li>
-  }
+  <div class="inner-box">
+    @foreach (Issue issue in Model)
+    {
+      <li>@Html.ActionLink($"{issue.Title}", "Details", new { id = issue.IssueId }) | @issue.Language.Name</li>
+    }
+  </div>
 </div>
-
-
 <p>@Html.ActionLink("Add new Issue", "Create")</p>
-
 <p>@Html.ActionLink("Home", "Index", "Home")</p>

@@ -8,12 +8,16 @@
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Name)
-    @Html.TextBoxFor(model => model.Name, new { @required = "required"})<br>
-
-    @Html.LabelFor(model => model.DocLink)
-    @Html.TextBoxFor(model => model.DocLink)<br>
-
-    <input type="submit" value="Add new language" class="btn btn-default" />
+  <table class="set-table">
+    <tr>
+      <td>@Html.LabelFor(model => model.Name)</td>
+      <td>@Html.TextBoxFor(model => model.Name, new { @required = "required"})</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.DocLink)</td>
+      <td>@Html.TextBoxFor(model => model.DocLink)</td>
+    </tr>
+  </table>
+  <input type="submit" value="Add new language" class="btn btn-default" />
 }
 <p>@Html.ActionLink("Show all languages", "Index")</p>

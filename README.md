@@ -57,3 +57,6 @@ Main Programs
 
 Copyright (c) 2020 **_{Mike Manchee, Daniel Schaaf, and William Donovan-Seid}_**
 Licensed under MIT
+
+co-authored-by: William Donovan-Seid <wdstwo@live.com>
+Co-authored-by: Daniel Schaaf <daniel.schaaf@outlook.com>"

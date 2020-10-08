@@ -11,13 +11,16 @@
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.LanguageId)
-
-    @Html.LabelFor(model => model.Name)
-    @Html.EditorFor(model => model.Name, new { @required = "required"})<br>
-
-    @Html.LabelFor(model => model.DocLink)
-    @Html.EditorFor(model => model.DocLink)<br>
-
+  <table class="set-table">
+    <tr>
+      <td>@Html.LabelFor(model => model.Name)</td>
+      <td>@Html.EditorFor(model => model.Name, new { @required = "required"})</td>
+    </tr>
+    <tr>
+      <td>@Html.LabelFor(model => model.DocLink)</td>
+      <td>@Html.EditorFor(model => model.DocLink)</td>
+    </tr>
+  </table>
     <input type="submit" value="Save" />
 }
 

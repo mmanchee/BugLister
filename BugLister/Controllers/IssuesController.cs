@@ -30,6 +30,7 @@ namespace BugLister.Controllers
     [HttpPost]
     public ActionResult Create(Issue issue)
     {
+      
       _db.Issues.Add(issue);
       _db.SaveChanges();
       return RedirectToAction("Index");
