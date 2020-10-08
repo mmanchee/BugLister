@@ -6,7 +6,7 @@
 
 <h2>Edit</h2>
 
-<h4>Edit this task: @Html.DisplayFor(model => model.Title)</h4>
+<h4>Editing: @Html.DisplayFor(model => model.Title)</h4>
 
 @using (Html.BeginForm())
 {
@@ -34,15 +34,19 @@
       </tr>
       <tr>
         <td>@Html.LabelFor(model => model.Link1)</td>
-        <td>@Html.TextAreaFor(model => model.Link1)</td>
+        <td>@Html.EditorFor(model => model.Link1)</td>
       </tr>
       <tr>
         <td>@Html.LabelFor(model => model.Link2)</td>
-        <td>@Html.TextAreaFor(model => model.Link2)</td>
+        <td>@Html.EditorFor(model => model.Link2)</td>
       </tr>
       <tr>
         <td>@Html.LabelFor(model => model.Link3)</td>
-        <td>@Html.TextAreaFor(model => model.Link3)</td>
+        <td>@Html.EditorFor(model => model.Link3)</td>
+      </tr>
+      <tr>
+        <td>@Html.LabelFor(model => model.Project)</td>
+        <td>@Html.DropDownList("ProjectId")</td>
       </tr>
     </table>
     <input type="submit" value="Save" />

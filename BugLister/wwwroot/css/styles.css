@@ -33,3 +33,7 @@ td {
 .inner-box {
   margin: 2% 5% 2% 5%;
 }
+.editor {
+  height: 40px;
+  width: 150px;
+}

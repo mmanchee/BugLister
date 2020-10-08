@@ -15,11 +15,7 @@
     </tr>
     <tr>
       <td>@Html.LabelFor(model => model.Description)</td>
-      <td>@Html.TextBoxFor(model => model.Description)</td>
-    </tr>
-  <tr>
-      <td>@Html.LabelFor(model => model.Issues)</td>
-      <td>@Html.TextBoxFor(model => model.Issues)</td>
+      <td>@Html.TextAreaFor(model => model.Description, new { @class="big-input"})</td>
     </tr>
     <tr>
       <td>@Html.LabelFor(model => model.Link)</td>
