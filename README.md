@@ -5,6 +5,8 @@
 #### By _**Mike Manchee, Daniel Schaaf, and William Donovan-Seid**_
 
 ## Description
+
+This project was built to help out with tracking bugs and help to remember trick from the past. User can add Project that they have worked on in the past or are working on now. Add Languages, so when you try and do something 2 years from now you can have reminders. Users can search the issue based on any word or fragment. In the issue you can add links to solutions or documentation, link the issue to projects and languages, and add the type or severity of the issue.
 <!-- Brainstorming
 
  -->
@@ -33,6 +35,7 @@
   * Run GitBASH in directory
   * Type "dotnet restore" to get bin and obj files
   * Type "dotnet run" in GitBash to run the program
+  * Add database per the instructions below.
   * Have fun with BugLister <!-- TITLE HERE -->
 
 * Cloning options
@@ -41,6 +44,7 @@
   * Run GitBASH in directory
   * Type "dotnet restore" to get bin and obj files
   * Type "dotnet run" in GitBash to run the program
+  * Add database per the instructions below.
   * Have fun with BugLister <!-- TITLE HERE -->
 
 ### Database Setup
@@ -82,7 +86,7 @@
   * MySQL
     * In the Navigator > Administration window, select Data Import/Restore.
     * In Import Options select Import from Self-Contained File.
-    * Navigate to the file.
+    * Navigate to buglister.sql.
     * Under Default Schema to be Imported To, select the New button.
       * Enter 'buglister' as the name of your database.
       * Click Ok.
@@ -97,16 +101,18 @@ No Known Bugs
 
 Main Programs
 * MySQL
-* C# / ASP.NET
-* MCV
+* C# / ASP.NET Core 
+* MVC
 * MSTest
 * CSS
-  * Bootstrap
+* Bootstrap
 
 
 ### Other Links
+[GitHub](https://blog.agood.cloud/img/common/github.png)
 [Mike's GitHub](https://github.com/mmanchee)
 [Will's GitHub](https://github.com/wdonovanseid)
+[Daniel's GitHub](https://github.com/dschaaf89)
 
 ### License
 

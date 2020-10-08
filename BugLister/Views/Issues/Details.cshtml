@@ -27,18 +27,27 @@
     <td>@Html.DisplayNameFor(model => model.Solution):</td>
     <td>@Html.DisplayFor(model => model.Solution)</td>
   </tr>
-  <tr>
-    <td>@Html.DisplayNameFor(model => model.Link1):</td>
-    <td>@Html.DisplayFor(model => model.Link1)</td>
-  </tr>
+  @if (Model.Link1 != null)
+  {
+    <tr>
+      <td>@Html.DisplayNameFor(model => model.Link1):</td>
+      <td><a href='@Html.DisplayFor(model => model.Link1)'>Link 1</td>
+    </tr>
+  }
+  @if (Model.Link2 != null)
+  {
   <tr>
     <td>@Html.DisplayNameFor(model => model.Link2):</td>
-    <td>@Html.DisplayFor(model => model.Link2)</td>
+    <td><a href='@Html.DisplayFor(model => model.Link2)'>Link 2</td>
   </tr>
+  }
+  @if (Model.Link3 != null)
+  {
   <tr>
     <td>@Html.DisplayNameFor(model => model.Link3):</td>
-    <td>@Html.DisplayFor(model => model.Link3)</td>
+    <td><a href='@Html.DisplayFor(model => model.Link3)'>Link 3</td>
   </tr>
+  }
   <tr>
     <td>@Html.DisplayNameFor(model => model.Project.ProjectName):</td>
     <td>@Html.DisplayFor(model => model.Project.ProjectName)</td>
