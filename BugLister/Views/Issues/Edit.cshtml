@@ -20,9 +20,9 @@
     @Html.LabelFor(model => model.Type)
     @Html.DropDownList("Type")<br>
     @Html.LabelFor(model => model.Description)
-    @Html.EditorFor(model => model.Description)<br>
+    @Html.EditorFor(model => model.Description, new { @class="big-input editor"})<br>
     @Html.LabelFor(model => model.Solution)
-    @Html.EditorFor(model => model.Solution)<br>
+    @Html.EditorFor(model => model.Solution, new { @class="big-input editor"})<br>
 
     <input type="submit" value="Save" />
 }
