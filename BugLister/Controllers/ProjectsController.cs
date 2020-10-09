@@ -55,20 +55,5 @@ namespace BugLister.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
-    public ActionResult Delete(int id)
-    {
-      Project thisProject = _db.Projects.FirstOrDefault(projects => projects.ProjectId == id);
-      return View(thisProject);
-    }
-
-    [HttpPost, ActionName("Delete")]
-    public ActionResult DeleteConfirmed(int id)
-    {
-      Project thisProject = _db.Projects.FirstOrDefault(projects => projects.ProjectId == id);
-      _db.Projects.Remove(thisProject);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
   }
 }

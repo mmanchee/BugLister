@@ -56,21 +56,5 @@ namespace BugLister.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-
-    public ActionResult Delete(int id)
-    {
-      Language thisLanguage = _db.Languages.FirstOrDefault(languages => languages.LanguageId == id);
-      return View(thisLanguage);
-    }
-
-    [HttpPost, ActionName("Delete")]
-    public ActionResult DeleteConfirmed(int id)
-    {
-      Language thisLanguage = _db.Languages.FirstOrDefault(languages => languages.LanguageId == id);
-      _db.Languages.Remove(thisLanguage);
-      _db.SaveChanges();
-      return RedirectToAction("Index");
-    }
-
   }
 }

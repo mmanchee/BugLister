@@ -20,9 +20,6 @@ namespace BugLister.Models
     public int ProjectId { get; set; }
     public virtual Language Language { get; set; }
     public virtual Project Project { get; set; }
-    private BugListerContext _db;
-
-    // public Type IssueType { get; set; }
 
     public static List<Issue> Search(List<Issue> allIssues, string searchParam)
     {
@@ -39,6 +36,10 @@ namespace BugLister.Models
           {
             matchingIssues.Add(issue);
           }
+          else if (issue.Solution.ToUpper().Contains(searchParam.ToUpper()))
+          {
+            matchingIssues.Add(issue);
+          }
         }
       }
       return matchingIssues;
@@ -46,7 +47,7 @@ namespace BugLister.Models
     public static List<SelectListItem> TypeList()
     {
       List<SelectListItem> items = new List<SelectListItem>();
-      items.Add(new SelectListItem { Text = "Critical", Value = "Critical", Selected = true});
+      items.Add(new SelectListItem { Text = "Critical", Value = "Critical"});
       items.Add(new SelectListItem { Text = "Minor", Value = "Minor" });
       items.Add(new SelectListItem { Text = "Suggestion", Value = "Suggestion" });
       return items;

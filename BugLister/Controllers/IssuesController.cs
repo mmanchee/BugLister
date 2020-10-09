@@ -46,9 +46,9 @@ namespace BugLister.Controllers
     public ActionResult Edit(int id)
     {
       var thisIssue = _db.Issues.FirstOrDefault(Issues => Issues.IssueId == id);
-      ViewBag.LanguageId = new SelectList(_db.Languages, "LanguageId", "LanguageName");
-      ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName");
-      ViewBag.Type = Issue.TypeList();
+      ViewBag.LanguageId = new SelectList(_db.Languages, "LanguageId", "LanguageName", thisIssue.LanguageId);
+      ViewBag.ProjectId = new SelectList(_db.Projects, "ProjectId", "ProjectName", thisIssue.ProjectId);
+      ViewBag.Type = new SelectList(Issue.TypeList(), "Value", "Text", thisIssue.Type);
       return View(thisIssue);
     }
     [HttpPost]

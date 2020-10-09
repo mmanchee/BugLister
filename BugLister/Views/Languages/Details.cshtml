@@ -35,7 +35,6 @@
 <p>@Html.ActionLink("Add new issue", "Create", "Issues")</p>
 <p>@Html.ActionLink("Back to language list", "Index")</p>
 <p>@Html.ActionLink("Edit language", "Edit", new { id = Model.LanguageId })</p>
-<p>@Html.ActionLink("Delete language", "Delete", new { id = Model.LanguageId })</p>
 <form action="/Issues/Search" method="post">
   <label>Enter a Search</label>
   <input class="input" type="text" id="search" name="search">
